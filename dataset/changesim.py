@@ -145,8 +145,8 @@ class ChangeSim(CDDataset):
         elif split == 'test':
             for map in test_list:
                 if subset == 'normal':
-                    self.image_total_files += sorted(glob.glob(ROOT + '/Query/Query_Seq_Test/' + map + '/Seq_0/rgb/?.png'))
-                    self.image_total_files += sorted(glob.glob(ROOT + '/Query/Query_Seq_Test/' + map + '/Seq_1/rgb/?.png'))
+                    self.image_total_files += sorted(glob.glob(ROOT + '/Query/Query_Seq_Test/' + map + '/Seq_0/rgb/*.png'))
+                    self.image_total_files += sorted(glob.glob(ROOT + '/Query/Query_Seq_Test/' + map + '/Seq_1/rgb/*.png'))
                 else:
                     self.image_total_files += sorted(glob.glob(ROOT + '/Query/Query_Seq_Test/' + map + '/Seq_0_%s/rgb/*.png'%subset))
                     self.image_total_files += sorted(glob.glob(ROOT + '/Query/Query_Seq_Test/' + map + '/Seq_1_%s/rgb/*.png'%subset))
@@ -161,9 +161,7 @@ class ChangeSim(CDDataset):
         self.seg = seg
         self._transforms = transforms
         self._revert_transforms = revert_transforms
-
-        self.image_total_files = self.image_total_files[:10]       
-
+ 
         size_dict = {
             256: (256, 256),
             480: None,
