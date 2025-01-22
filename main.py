@@ -14,9 +14,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 def get_argparser():
-    parser = argparse.ArgumentParser() 
-    parser.add_argument('--data_root', type=str, default='./datasets',
-                        help='The root path of datasets')                       
+    parser = argparse.ArgumentParser()                      
     parser.add_argument('--dataset', type=str, default='ChangeSim_Multi',
                         choices=['VL_CMU_CD', 'TSUNAMI', 'GSV', 'ChangeSim_Multi'],
                         help='Name of dataset to use')

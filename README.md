@@ -21,8 +21,18 @@ Yonsei University
 
 ## Prerequisites
 ### Pretrained Weights
-* Download the DEVA weights from [this repository](https://github.com/hkchengrex/Tracking-Anything-with-DEVA).
-* Download the SAM weights from [this repository](https://github.com/facebookresearch/segment-anything).
+* Download the DEVA weights from [this repository](https://github.com/hkchengrex/Tracking-Anything-with-DEVA) or use the bash command:
+
+```bash
+wget -P ./model_weights/ https://github.com/hkchengrex/Tracking-Anything-with-DEVA/releases/download/v1.0/DEVA-propagation.pth
+```
+
+* Download the SAM weights from [this repository](https://github.com/facebookresearch/segment-anything) or use the bash command:
+
+```bash
+wget -P ./model_weights/ https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+```
+
 * Place the downloaded weights in the `model_weights` folder.
 
 ### Dataset Preparation 
