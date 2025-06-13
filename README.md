@@ -1,12 +1,15 @@
 <div align="center">
   
 # Zero-Shot Scene Change Detection
-<h3><strong>AAAI 2025</strong></h3>
+### **AAAI 2025**
 
 Kyusik Cho &emsp; Dong Yeop Kim &emsp; Euntai Kim  
 Yonsei University
 
-<a href='https://arxiv.org/abs/2406.11210'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
+[![arXiv](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2406.11210)
+[![AAAI 2025](https://img.shields.io/badge/AAAI-2025-003973)](https://ojs.aaai.org/index.php/AAAI/article/view/32253)
+[![GitHub stars](https://badgen.net/github/stars/kyusik-cho/ZSSCD)](https://github.com/kyusik-cho/ZSSCD)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 
 </div>
@@ -20,6 +23,12 @@ Yonsei University
 
 
 ## Prerequisites
+
+### Environmental Setup
+```bash
+conda env create -f environment.yml
+```
+
 ### Pretrained Weights
 * Download the DEVA weights from [this repository](https://github.com/hkchengrex/Tracking-Anything-with-DEVA) or use the bash command:
 
@@ -35,14 +44,16 @@ wget -P ./model_weights/ https://dl.fbaipublicfiles.com/segment_anything/sam_vit
 
 * Place the downloaded weights in the `model_weights` folder.
 
+
+
 ### Dataset Preparation 
 Download the datasets and set the file structure as follows.  
-Only the test dataset is required.  
+Only the test set is required.  
 Edit `dataset/path_config.py` to set the dataset directory path.
 
 * [ChangeSim](https://github.com/SAMMiCA/ChangeSim)
 ```bash
-ChangSim
+ChangeSim
 ├── Query
 │   └── Query_Seq_Test
 │       ├── Warehouse_6
@@ -120,9 +131,23 @@ $ python main.py --dataset GSV
 ```
 
 ## Acknowledgements
-Our pytorch implementation is based on the following projects and repos.
+Our PyTorch-based implementation is based on the following projects and repos.
 * [Segment Anything](https://github.com/facebookresearch/segment-anything)
 * [DEVA](https://github.com/hkchengrex/Tracking-Anything-with-DEVA)
 * [GCDSS](https://github.com/JethroPeng/GCDSS)
 
+
+## Cite
+Please cite our paper if our work is helpful to your research:
+```
+@inproceedings{cho2025zero,
+  title={Zero-shot scene change detection},
+  author={Cho, Kyusik and Kim, Dong Yeop and Kim, Euntai},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={3},
+  pages={2509--2517},
+  year={2025}
+}
+```
 
