@@ -6,10 +6,10 @@
 Kyusik Cho &emsp; Dong Yeop Kim &emsp; Euntai Kim  
 Yonsei University
 
-[![arXiv](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2406.11210)
 [![AAAI 2025](https://img.shields.io/badge/AAAI-2025-003973)](https://ojs.aaai.org/index.php/AAAI/article/view/32253)
-[![GitHub stars](https://badgen.net/github/stars/kyusik-cho/ZSSCD)](https://github.com/kyusik-cho/ZSSCD)
+[![arXiv](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2406.11210)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![GitHub Stars](https://img.shields.io/github/stars/kyusik-cho/ZSSCD?style=social)](https://github.com/kyusik-cho/ZSSCD)
 
 
 </div>
@@ -27,6 +27,7 @@ Yonsei University
 ### Environmental Setup
 ```bash
 conda env create -f environment.yml
+conda activate zsscd
 ```
 
 ### Pretrained Weights
@@ -50,6 +51,9 @@ wget -P ./model_weights/ https://dl.fbaipublicfiles.com/segment_anything/sam_vit
 Download the datasets and set the file structure as follows.  
 Only the test set is required.  
 Edit `dataset/path_config.py` to set the dataset directory path.
+
+<details>
+  <summary> Dataset folder structure (click to expand)</summary>
 
 * [ChangeSim](https://github.com/SAMMiCA/ChangeSim)
 ```bash
@@ -110,6 +114,7 @@ PCD
     └── mask
 ```
 
+</details>
 
 ## Evaluation
 * ChangeSim

@@ -165,4 +165,3 @@ dependencies:
     - typing-extensions==4.7.1
     - urllib3==1.26.18
     - wheel==0.41.2
-prefix: /home/kscho/anaconda3/envs/zsscd
